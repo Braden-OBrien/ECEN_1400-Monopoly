@@ -92,20 +92,7 @@ public:
         Serial.println("End of diceRoll");
         Serial.print("double is: ");
         Serial.println(*isDouble);
-        return dice_n;
-
-        //1 way for 2  //1
-        //1 ways for 3  //2
-        //2 ways for 4 //4
-        //2 ways for 5  //6
-        //3 ways for 6  //9
-        //3 ways for 7  //12
-        //3 ways for 8  //15
-        //2 ways for 9  //17
-        //2 ways for 10  //19
-        //1 ways for 11  //20
-        //1 ways for 12  //21
-        //21 possible rolls
+	return dice_n;
     }
 
     int doMove(int diceRoll) {
