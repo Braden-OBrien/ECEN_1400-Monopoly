@@ -10,18 +10,10 @@ int Roll(int i)
     std::string output = "Press A to roll!";
     bool input = false;
     lcd_write(i, output, 0, 0);
-    while (!input) { input = digitalRead(Players[i].buttons[0]); } //Serial.println(input); Serial.print("doing button "); Serial.println(Players[i].buttons[0]); }
+    while (!input) { input = digitalRead(Players[i].buttons[0]); }
     bool isDouble = false;
     isDouble = Players[i].Move();
-    //Players[i].Move(1);
-    /*Serial.print("On a tile! Owned by: ");
-    Serial.println(*Players[i].position->Owner);
-    Serial.print("Tile is: ");
-    Serial.println(Players[i].position->Name.c_str());*/
     delay(2000);
-    /*Serial.println("End of roll");
-    Serial.print("Double is now : ");
-    Serial.println(isDouble);*/
     return isDouble;
 }
 
