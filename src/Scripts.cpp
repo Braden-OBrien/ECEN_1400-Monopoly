@@ -2,9 +2,6 @@
 // 
 // 
 
-
-//Buttons 13-6
-
 #include <Wire.h>
 #include "aaaaaaaaa.h"
 #include "Scripts.h"
@@ -181,54 +178,3 @@ void led_move_backwards(int n_start, int n, int player_id)
         }
     }
 }
-
-/*LCDS[lcd_id].command(LCD_CLEARDISPLAY);
-    delay(50);
-    LCDS[lcd_id].setCursor(x, y);
-    LCDS[lcd_id].printstr(message.c_str());*/
-
-
-    /*LCDS[lcd_id].clear();
-    delay(50);
-    vector<string> new_strings;
-    new_strings.push_back(message);
-    if (message.length() > (lcd_length - x))  //Too large for the row?
-    {
-        for (int c = y - 3; c != 0; c++)  //Reduce the size, if all the rows are done
-        {
-            new_strings = scripts::string_split(new_strings, x);
-            if (new_strings.back().length() < (lcd_length - x)) //or the size is ok, break
-            {
-                break;
-            }
-        }
-        if (new_strings.back().length() > (lcd_length - x)) //Too many plain bagels
-        {
-            //Serial.println("String too large for LCD Display");
-            return;
-        }
-    }
-    for (int c = y; y != lcd_height; y++)
-    {
-        scripts::cursor_set(lcd_id, x, c);
-        LCDS[lcd_id].printstr(new_strings.at(c).c_str());  //Printing to LCD
-    }
-    delay(2000);*/
-
-    /*string split;                                               //Separate into multiple strings
-            string message = strings.back();
-            char _first = message.front();
-            strings.erase(strings.end() - 1);
-            while (split.length() < (lcd_length + 1 - x) || message.length() == 0)
-            {
-                if (((message.front() == _first) && (_first == ' ')) && split.length() == 0)    //Remove spaces at the beginning of a new line
-                {
-                    message.erase(message.begin());
-                    continue;
-                }
-                split.push_back(message.front());
-                message.erase(message.begin());
-            }
-            strings.push_back(split);
-            strings.push_back(message);
-            return strings;*/
